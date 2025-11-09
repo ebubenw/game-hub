@@ -1,12 +1,28 @@
-import { Button, ButtonGroup } from "@chakra-ui/react";
+import { Grid, GridItem, Show, useBreakpointValue } from "@chakra-ui/react";
 
 function App() {
+  const isLargeScreen = useBreakpointValue({ base: false, lg: true });
   return (
     <>
-      <ButtonGroup>
-        <Button>Click me</Button>
-        <Button>Click me</Button>
-      </ButtonGroup>
+      <Grid
+        templateAreas={{
+          base: `"nav " " main"`,
+          lg: `"nav nav" "aside main"`, //>1024px
+        }}
+      >
+        <GridItem area="nav" bg="coral">
+          Nav
+        </GridItem>
+        <Show when={isLargeScreen}>
+          <GridItem area="aside" bg="gold">
+            Aside
+          </GridItem>
+        </Show>
+
+        <GridItem area="main" bg="dodgerblue">
+          Main
+        </GridItem>
+      </Grid>
     </>
   );
 }
