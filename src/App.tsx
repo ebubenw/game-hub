@@ -1,7 +1,6 @@
 import { Grid, GridItem, Show, useBreakpointValue } from "@chakra-ui/react";
 import GameGrid from "./myComponents/GameGrid";
 import NavBar from "./myComponents/NavBar";
-import ColorModeSwitch from "./myComponents/ColorModeSwitch";
 
 function App() {
   const isLargeScreen = useBreakpointValue({ base: false, lg: true });
