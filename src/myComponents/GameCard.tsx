@@ -19,6 +19,7 @@ function GameCard({ game }: Props) {
   return (
     <>
       <Card
+        width="300px"
         padding="5"
         bg={bg}
         color={color}
