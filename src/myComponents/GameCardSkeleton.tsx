@@ -3,7 +3,7 @@ import { Card } from "@chakra-ui/card";
 
 function GameCardSkeleton() {
   return (
-    <CardRoot borderRadius={10} width="300px">
+    <CardRoot>
       <Card>
         <Skeleton height="20px"></Skeleton>
         <CardBody>

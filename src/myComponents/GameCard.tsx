@@ -18,14 +18,7 @@ function GameCard({ game }: Props) {
 
   return (
     <>
-      <Card
-        width="300px"
-        padding="5"
-        bg={bg}
-        color={color}
-        borderRadius={10}
-        overflow={"hidden"}
-      >
+      <Card padding="5" bg={bg} color={color}>
         <Image src={getCroppedImageurl(game.background_image)} />
         <CardBody>
           <Heading fontSize="2xl">{game.name}</Heading>
