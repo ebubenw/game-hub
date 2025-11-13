@@ -11,14 +11,31 @@ import {
 import { data } from "framer-motion/client";
 import { BsChevronDown } from "react-icons/bs";
 
-function SortSelector() {
+interface Props {
+  sortOrder: string;
+  onSelectSortOrder: (sortOrder: string) => void;
+}
+
+function SortSelector({ sortOrder, onSelectSortOrder }: Props) {
+  const sortOrders = [
+    { value: "", label: "Relevance" },
+    { value: "-added", label: "Date added" },
+    { value: "name", label: "Name" },
+    { value: "-released", label: "Release date" },
+    { value: "-metacritic", label: "Popularity" },
+    { value: "-rating", label: "Average rate" },
+  ];
+
+  const currentSortorder = sortOrders.find(
+    (order) => order.value === sortOrder
+  );
   return (
     <>
       <MenuRoot>
         <MenuTrigger asChild>
           <Button>
             <HStack>
-              Order by: relevance
+              Order by: {currentSortorder?.label || "Relevance"}
               <Icon as={BsChevronDown} />
             </HStack>
           </Button>
@@ -26,12 +43,15 @@ function SortSelector() {
 
         <MenuPositioner>
           <Menu.Content>
-            <MenuItem value="">relevance</MenuItem>
-            <MenuItem value="">date added</MenuItem>
-            <MenuItem value="">name</MenuItem>
-            <MenuItem value="">release date</MenuItem>
-            <MenuItem value="">popularity</MenuItem>
-            <MenuItem value="">average rating</MenuItem>
+            {sortOrders.map((order) => (
+              <MenuItem
+                onClick={() => onSelectSortOrder(order.value)}
+                value={order.value}
+                key={order.value}
+              >
+                {order.label}
+              </MenuItem>
+            ))}
           </Menu.Content>
         </MenuPositioner>
       </MenuRoot>
