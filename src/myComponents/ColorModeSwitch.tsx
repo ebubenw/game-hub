@@ -7,7 +7,7 @@ const ColorModeSwitch = () => {
   return (
     <>
       <HStack>
-        <ColorModeButton onChange={toggleColorMode} />
+        <ColorModeButton whiteSpace="nowrap" onChange={toggleColorMode} />
       </HStack>
     </>
   );
