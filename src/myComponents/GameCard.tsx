@@ -1,7 +1,7 @@
-import { useColorMode, useColorModeValue } from "@/components/ui/color-mode";
+import { useColorModeValue } from "@/components/ui/color-mode";
 import type { Game } from "@/hooks/useGames";
 import { Card, CardBody } from "@chakra-ui/card";
-import { Heading, HStack, Image, Text } from "@chakra-ui/react";
+import { Heading, HStack, Image } from "@chakra-ui/react";
 import PlatformIconList from "./PlatformIconList";
 import CriticScore from "./CriticScore";
 import getCroppedImageurl from "@/services/image-url";
@@ -12,8 +12,6 @@ interface Props {
 }
 
 function GameCard({ game }: Props) {
-  const { toggleColorMode } = useColorMode();
-
   const bg = useColorModeValue("gray", "gray");
   const color = useColorModeValue("white", "dark");
 

@@ -6,7 +6,6 @@ import {
   Image,
   Spinner,
   Stack,
-  Text,
 } from "@chakra-ui/react";
 
 import getCroppedImageurl from "@/services/image-url";

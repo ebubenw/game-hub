@@ -5,7 +5,6 @@ import {
   HStack,
   Icon,
   Menu,
-  MenuContent,
   MenuItem,
   MenuPositioner,
   MenuRoot,

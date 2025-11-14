@@ -8,7 +8,6 @@ import {
   MenuRoot,
   MenuTrigger,
 } from "@chakra-ui/react";
-import { data } from "framer-motion/client";
 import { BsChevronDown } from "react-icons/bs";
 
 interface Props {

@@ -3,7 +3,6 @@ import {
   Flex,
   Grid,
   GridItem,
-  HStack,
   Show,
   useBreakpointValue,
 } from "@chakra-ui/react";

@@ -2,7 +2,7 @@ import { ColorModeButton, useColorMode } from "@/components/ui/color-mode";
 import { HStack } from "@chakra-ui/react";
 
 const ColorModeSwitch = () => {
-  const { toggleColorMode, colorMode } = useColorMode();
+  const { toggleColorMode } = useColorMode();
 
   return (
     <>
