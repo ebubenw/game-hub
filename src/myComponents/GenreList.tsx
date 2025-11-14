@@ -8,6 +8,7 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react";
+
 import getCroppedImageurl from "@/services/image-url";
 
 interface Props {
