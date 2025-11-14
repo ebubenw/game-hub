@@ -48,7 +48,7 @@ function App() {
           />
         </GridItem>
         <Show when={isLargeScreen}>
-          <GridItem area="aside" paddingX={5}>
+          <GridItem area="aside" paddingX={2}>
             <GenreList
               selectedGenre={gameQuery.genre}
               onSelectGenre={(genre) => setGameQuery({ ...gameQuery, genre })}
